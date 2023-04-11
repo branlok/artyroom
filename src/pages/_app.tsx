@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }: AppProps) {
     domain='dev-l5iyg4ax8rlhl2ha.us.auth0.com'
     clientId='3TYRMTQ9odZIKGXMy1ZyKkKNtBm7QgT4'
     authorizationParams={{
-      redirect_uri: "http://localhost:3000"
+      redirect_uri: process.env.CF_PAGES === "1" ? "https://artyroom.pages.dev" : "http://localhost:3000"
     }}
   >
     <Component {...pageProps} />
