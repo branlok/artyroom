@@ -12,7 +12,7 @@ const LogoutButton = () => {
   const { logout } = useAuth0();
 
   return (
-    <button onClick={() => logout({ logoutParams: { returnTo: 'http://localhost:3000/' } })}>
+    <button onClick={() => logout({ logoutParams: { returnTo: "https://artyroom.pages.dev" } })}>
       Log Out
     </button>
   );
